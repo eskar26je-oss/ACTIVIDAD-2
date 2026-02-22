@@ -12,12 +12,13 @@ protected:
 	Persona (){
 		
 	}  
-	Persona(string c, string nom, string ape, string dir, string fn, int tel){
-		cui = c;
+	Persona(string cui, string nom, string ape, string dir, string fn, int tel, bool gen){
+		cui = cui;
 		nombres = nom;
 		apellidos = ape;
 		direccion = dir;
 		fecha_nacimiento = fn;
+		genero = gen;
 		telefono = tel;
 	}
 	
