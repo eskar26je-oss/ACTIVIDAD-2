@@ -1,8 +1,10 @@
+#ifndef DOCENTE_CPP
+#define DOCENTE_CPP
 #include "Persona.cpp"
 #include <iostream>
 using namespace std;
 
-class Docente : Persona {
+class Docente : public Persona {
 	private :
 		string codigo, nit, profesion;
 		float salario;
@@ -31,18 +33,25 @@ class Docente : Persona {
 	void setProfesion (string prof){profesion= prof; }
 	
 	//get(mostrar)
-	string getNit (){return nit;}
-	string  getNombres (){return nombres;}
-	string  getApellidos (){return apellidos;}
-	string  getDireccion (){return direccion;}
+	string geCui (){return cui;}
+	string getNombres (){return nombres;}
+	string getApellidos (){return apellidos;}
+	string getDireccion (){return direccion;}
+	string getFechaNacimiento (){return fecha_nacimiento;}
 	int getTelefono (){return telefono;}
-
+	bool getGenero (){return genero;}
+	string getCodigo (){return codigo;}
+	string getNit (){return nit;}
+	float getSalario (){return salario;}
+	string getProfesion (){return profesion;}
 
 
 		void leer();
-	void mostrarDocente ();
-	
-		
-		
+	void mostrarDocente (){
+    cout <<endl<<  "--- Datos Docente ---" << endl;
+    cout << "Nombre: " << nombres << " " << apellidos << endl;
+    cout <<"Codigo: "<< codigo << "   NIT: " << nit << "   Profesion: " << profesion <<"  Salario: " << salario << endl;
+}
+			
 };	
-
+#endif

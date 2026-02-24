@@ -1,3 +1,5 @@
+#ifndef PERSONA_CPP
+#define PERSONA_CPP
 #include <iostream>
 using namespace std;
 
@@ -25,8 +27,7 @@ protected:
 	void crear();
 	void leer();
 	void actualizar();
-	void borrar()
-;
+	void borrar();
 };
-
+#endif
 
